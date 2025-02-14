@@ -27,6 +27,84 @@
             background-color: var(--color-background);
         }
 
+        .body2 {
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        .body2 p {
+            color: black;
+        }
+      
+        .body2 p span {
+            color: #5f6368;
+        }
+
+        .body2 .logo {
+            margin-bottom: 20px;
+        }
+
+        .body2 .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .body2 .error-text h1 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 16px;
+        }
+
+        .body2 .error-text h1 span {
+            color: #5f6368;
+            margin-left: 8px;
+        }
+
+        .body2 .error-text p {
+            color: black;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .body2 .error-text p span {
+            color: #5f6368;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .body2 .robot-image {
+            width: 200px;
+            height: 200px;
+        }
+
+        .body2 .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .body2 .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .body2 .robot-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
         .sidebar {
             width: var(--sidebar-width);
             background-color: #f0f0f0;
@@ -171,6 +249,7 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
             margin-top: 1rem;
+            cursor: pointer;
         }
 
         .categories {
@@ -247,8 +326,12 @@
             color: #cccccc;
         }
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
+            .body1 {
+                display: none;
+            }
+
+            .body2 {
+                display: block;
             }
 
             .sidebar {
@@ -270,61 +353,75 @@
     </style>
 </head>
 <body>
-    <aside class="sidebar">
-        <img src="logo.png" alt="Logo de Microsoft Store" class="logo">
-        <nav>
-            <ul>
-                <li><a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/inicio">Inicio</a></li>
-                <li><a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/juegos">Juegos</a></li>
-                <li><a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/aplicaciones" class="active">Aplicaciones</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main class="main-content">
-        <section class="hero">
-            <h1>ChatGPT</h1>
-            <p>Aplicación con ChatGPT (App no Oficial de ChatGPT)</p>
-        </section>
-
-        <section class="featured-products">
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="app.png" alt="Crear aplicación de escritorio">
-                    <div class="product-info">
-                        <h3>Descargar App</h3>
-                        <p><span>☆☆☆☆☆ (Sin calificaciones)</span></p>
-                        <a class="download" href="ChatGPT Setup 1.0.0.exe" download="ChatGPT Setup-1.0.0.exe">Descargar</a>
+    <div class="body1">
+        <aside class="sidebar">
+            <img src="logo.png" alt="Logo de Microsoft Store" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/inicio">Inicio</a></li>
+                    <li><a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/juegos">Juegos</a></li>
+                    <li><a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/aplicaciones" class="active">Aplicaciones</a></li>
+                </ul>
+            </nav>
+        </aside>
+    
+        <main class="main-content">
+            <section class="hero">
+                <h1>ChatGPT</h1>
+                <p>Aplicación con ChatGPT (App no Oficial de ChatGPT)</p>
+            </section>
+    
+            <section class="featured-products">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="app.png" alt="Crear aplicación de escritorio">
+                        <div class="product-info" style="display: block;">
+                            <h3>Descargar App</h3>
+                            <p><span>☆☆☆☆☆ (Sin calificaciones)</span></p>
+                            <iframe src="https://1drv.ms/u/c/ae6f435520102e1f/IQRF5ZzH20HASoETN4TmuB4hAUGbdFEdA6VJDaM7XJ4APb8" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="featured-products">
-            <h2>Otros Proyectos</h2>
-            <div class="product-grid">
-                <a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/aplicaciones/crear-aplicacion-de-escritorio" style="text-decoration: none;">
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3>Crear aplicación de escritorio (App)</h3>
-                            <p><span>☆☆☆☆☆ (Sin calificaciones)</span></p>
+            </section>
+            
+            <section class="featured-products">
+                <h2>Otros Proyectos</h2>
+                <div class="product-grid">
+                    <a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/aplicaciones/crear-aplicacion-de-escritorio" style="text-decoration: none;">
+                        <div class="product-card">
+                            <div class="product-info">
+                                <h3>Crear aplicación de escritorio (App)</h3>
+                                <p><span>☆☆☆☆☆ (Sin calificaciones)</span></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/juegos/clicker-game" style="text-decoration: none;">
-                    <div class="product-card">
-                        <div class="product-info">
-                            <h3>Clicker Game (Juego)</h3>
-                            <p><span>★★★★☆ (9-10)</span></p>
+                    </a>
+                    <a href="https://dev-bit-oficial.github.io/proyectos-de/hugo-elias/juegos/clicker-game" style="text-decoration: none;">
+                        <div class="product-card">
+                            <div class="product-info">
+                                <h3>Clicker Game (Juego)</h3>
+                                <p><span>★★★★☆ (9-10)</span></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+            </section>
+    
+            <footer>
+                <p class="copyright">&copy; 2025 DevBit. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+    <div class="body2">
+        <div class="content">
+            <div class="error-text">
+                <img src="favicon.ico" class="logo">
+                <h1>404. <span>Not Found</span></h1>
+                <p>There isn't DevBit site here.</p>
+                <p><span>Check that the URL is written correctly.</span></p>
             </div>
-        </section>
-
-        <footer>
-            <p class="copyright">&copy; 2025 DevBit. Todos los derechos reservados.</p>
-        </footer>
-    </main>
+    
+            <img src="robot.png" alt="Robot illustration" class="robot-image">
+        </div>
+    </div>
 </body>
 </html>
